@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+$width: 1020px;
+$padding: 24px;
+$primary: #2c0781;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  padding: $padding;
+}
+
+#app {
+  width: 100%;
+  max-width: $width;
+  border: 1px solid #000;
+  background: #fff;
+  margin: 24px 0;
+  border-radius: 7px;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+// Header
+
+.pwg-header {
+  width: 100%;
+  border-bottom: 1px solid $primary;
+  padding: $padding;
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary;
+
+    svg {
+      height: 4em;
+      margin-right: 1em;
+      color: $primary;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      margin-left: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
+
+// Form
+
+.pwg-form {
+  width: 100%;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  padding: $padding;
+
+  &__control {
+    background: #fff;
+    padding: 7px 0;
+
+    h3 {
+      font-weight: 400;
+      font-size: 1.2em;
+      margin-bottom: 7px;
+      margin-top: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 7px;
+      color: #222;
+    }
+
+    input[type='number'] {
+      width: 100%;
+      font-size: inherit;
+      padding: 7px;
+      border: 1px solid #333;
+      border-radius: 7px;
+      color: #222;
+    }
+
+    &--checkbox {
+      label {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 3px;
+        font-size: 1.1em;
+      }
+
+      div {
+        margin-bottom: 7px;
+
+        label {
+          margin-left: 3px;
+        }
+      }
+    }
+
+    button {
+      font-size: inherit;
+      border: none;
+      background: $primary;
+      color: #fff;
+      padding: 12px 24px;
+      cursor: pointer;
+      border-radius: 7px;
+    }
+
+    &:last-of-type {
+      margin-top: 14px;
+    }
+  }
+}
+
+// Output
+
+.pwg-output {
+  padding: $padding;
+  border: 1px solid $primary;
+  width: 100%;
+  max-width: calc($width - 80px);
+  border-radius: 7px;
+  margin: $padding;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  h2 {
+    width: 100%;
+    color: $primary;
+    margin-bottom: 12px;
+  }
+
+  &__error {
+    width: 100%;
+    color: #cc0000;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+  }
+
+  &__phrase {
+    color: $primary;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  &__password {
+    font-size: inherit;
+    padding: 7px;
+    border: 1px solid #333;
+    border-radius: 7px;
+    color: #222;
+    flex: 1 1 auto;
+    height: 2.73em;
+  }
+
+  &__copy {
+    font-size: inherit;
+    border: none;
+    background: $primary;
+    color: #fff;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      height: 1.2em;
+      margin-right: 3px;
+    }
+  }
+}
